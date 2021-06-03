@@ -1,14 +1,14 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
-import usersRoutes from './routes/users.js';
+import laporanRoutes from './routes/laporan.js';
 
 const app = express();
 const port = 5000;
 
 app.use(bodyParser.json());
 
-app.use('/users', usersRoutes);
+app.use('/laporan', laporanRoutes);
 
 app.get('/', (req, res) => res.send('Hello'));
 
